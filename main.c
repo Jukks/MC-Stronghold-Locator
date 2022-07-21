@@ -29,7 +29,7 @@ int get_coordinate(){
 float get_angle(){
     int valid = 1;
     int i;
-    char input[6];
+    char input[8];
     do{
         if(valid == 0){
             printf("Invalid input, please try again:\n");
@@ -38,8 +38,8 @@ float get_angle(){
         scanf("%s", input);
         // Check if input has non-numeric characters
         for(i=0; i<8 && input[i]!='\0'; i++){
-            if((input[i] < '0' || input[i] > '9') && input[i]!='.'
-                && input[i]!='-'){
+            if((input[i] < '0' || input[i] > '9') && (input[i]!='.'
+                && input[i]!='-')){
                 valid = 0;
                 break;
             }
